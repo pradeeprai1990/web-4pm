@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        #heading{
+            color: red;
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <input type="password" id="pass">
+     <button id="btn" onclick="showHidePassword()">show</button>
+
+
+    <h1 id="heading">
+        Welcome <u>to </u> ws
+        <div>Hello</div>
+    </h1>
+
+    <img id="img1" width="300" height="300" src="https://uptownskylla.in/wp-content/uploads/2022/09/01-1-2048x1497.jpg"
+        alt="">
+
+    <img id="img2" width="300" height="300"
+        src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-06.jpg" alt="">
+
+        <br/>
+    <button onclick="swapImage()">Swap Image</button>
+
+
+</body>
+<script src="app.js"></script>
+<script>
+    let img1Element = document.getElementById("img1")
+    let img2Element = document.getElementById("img2")
+    function swapImage() {
+        let img1Src = img1Element.src
+        let img2Src = img2Element.src
+        img1Element.src = img2Src
+        img2Element.src = img1Src
+
+    }
+
+
+
+    let passElement=document.getElementById("pass") //type="password"
+    //   <input type="password" id="pass">
+    let btnElement=document.getElementById("btn") //button.innerHTML = show
+    //  <button id="btn" onclick="showHidePassword()">show</button>
+    function showHidePassword(){
+        
+        if(btnElement.innerHTML=="show"){
+            passElement.type="text"
+             //   <input type="text" id="pass">
+               btnElement.innerHTML="hide"
+        }
+        else{
+            passElement.type="password"
+             btnElement.innerHTML="show"
+        }
+    }
+
+
+</script>
+
+</html>

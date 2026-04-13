@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="main">
+        <h1>About us</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quisquam accusamus hic tenetur explicabo perspiciatis deleniti nemo et nostrum distinctio, qui, ab corporis sapiente ipsum amet? Reprehenderit, ut. Tenetur, quaerat.
+        </p>
+        <button>Save</button>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptates totam officia vitae obcaecati dolores id excepturi aspernatur est quam consequuntur doloremque culpa illo suscipit nam, in molestiae perferendis eum!
+        </p>
+    </div>
+</body>
+<script>
+    let mainElement = document.querySelector('.main');
+    let buttonElement = document.querySelector('button');
+    console.log(mainElement.children); //HTML Collection  -->ARRAY
+
+    console.log(buttonElement.parentElement); //Main Div
+    
+     buttonElement.parentElement.parentElement.style.background="yellow"; 
+
+    console.log(buttonElement.nextElementSibling);
+     
+     console.log(buttonElement.previousElementSibling);
+
+     console.log(buttonElement.previousElementSibling.previousElementSibling);
+
+
+     console.log(mainElement.lastElementChild);
+     console.log(mainElement.firstElementChild);
+     
+     
+    // console.log(mainElement.children[0]); //HTML Collection  -->ARRAY
+    //  console.log(mainElement.children[1]);
+    //     console.log(mainElement.children[2]);
+</script>
+</html>

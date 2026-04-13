@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 300px;
+            height: 500px;
+            margin: auto;
+            box-shadow: 0px 0px 10px 2px #ccc;
+        }
+
+        .mainOn{
+            background-color: rgb(236, 236, 29);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="main "></div>
+
+    <button onclick="lightOn()">On</button>
+    <button onclick="lightOff()">OFF</button>
+    <button onclick="lightonOff()">On | Off</button>
+</body>
+<script>
+    let mainElement=document.querySelector(".main")
+
+    function lightOn(){
+       mainElement.classList.add('mainOn')
+    }
+     function lightOff(){
+        mainElement.classList.remove('mainOn')
+    }
+
+     function lightonOff(){
+        mainElement.classList.toggle("mainOn")
+    }
+</script>
+</html>

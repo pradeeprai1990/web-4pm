@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="blackOverlayVidoe ">
+    <div class="videoModal">
+        <i class="fa-solid fa-xmark"></i>
+        <iframe src=""  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>
+    <section class="faq-page">
+        <div class="faq-wrapper">
+            <div class="faq-intro">
+                <span class="faq-badge">Support Center</span>
+                <h1>Frequently Asked Questions</h1>
+                <p>
+                    Find quick answers to the most common questions about our services,
+                    pricing, support, and getting started.
+                </p>
+            </div>
+
+            <div class="faq-grid">
+                <article class="faq-card">
+                    <h2>What services do you provide?  <i class="fa-solid fa-angle-down "></i> </h2>
+                    <p>
+                        We provide web design, front-end development, landing page creation,
+                        and responsive website solutions for businesses and personal brands.
+                    </p>
+                </article>
+
+                <article class="faq-card">
+                    <h2>How long does a project take?  <i class="fa-solid fa-angle-down"></i> </h2>
+                    <p>
+                        A simple website usually takes 5 to 7 working days, while larger
+                        projects depend on the number of pages and custom features required.
+                    </p>
+                </article>
+
+                <article class="faq-card">
+                    <h2>Do you build mobile-friendly websites?  <i class="fa-solid fa-angle-down"></i> </h2>
+                    <p>
+                        Yes, every layout is designed to work smoothly across desktops,
+                        tablets, and mobile devices with responsive HTML and CSS.
+                    </p>
+                </article>
+
+                <article class="faq-card">
+                    <h2>Can I request design changes later?  <i class="fa-solid fa-angle-down"></i> </h2>
+                    <p>
+                        Absolutely. Revisions can be discussed during the project, and future
+                        updates can also be added based on your needs.
+                    </p>
+                </article>
+
+                <article class="faq-card">
+                    <h2>Do you provide support after delivery?  <i class="fa-solid fa-angle-down"></i> </h2>
+                    <p>
+                        Yes, post-delivery support is available for bug fixes, small content
+                        updates, and basic guidance after the project is completed.
+                    </p>
+                </article>
+
+                <article class="faq-card">
+                    <h2>How can I get started?  <i class="fa-solid fa-angle-down"></i> </h2>
+                    <p>
+                        You can begin by sharing your project idea, preferred style, and key
+                        requirements so the layout and timeline can be planned clearly.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="videoSection">
+        <div class="videoMid">
+            <figure data-videoPath="https://www.youtube.com/embed/YjCz8OGFf9Y">
+                <div class="videoCardImg">
+                       <img src="https://lawpreptutorialkolkata.com/wp-content/uploads/2025/12/thum1.jpg"/>
+
+                       <img class="playIcon" src="https://lawpreptutorialkolkata.com/wp-content/themes/LawprepKolkata/image/Frame%20661.svg" alt="">
+                </div>
+             
+                <h3>For CLAT coaching that cares and equips you for
+                                    success.
+                                </h3>
+            </figure>
+            <figure  data-videoPath="https://www.youtube.com/embed/I3B_LfOs1Zg">
+                   <div class="videoCardImg">
+                <img src="https://lawpreptutorialkolkata.com/wp-content/uploads/2025/12/thum2.jpg"/>
+                    <img class="playIcon" src="https://lawpreptutorialkolkata.com/wp-content/themes/LawprepKolkata/image/Frame%20661.svg" alt="">
+
+                </div>
+                <h3>For CLAT coaching that cares and equips you for
+                                    success.
+                                </h3>
+            </figure>
+            <figure data-videoPath="https://www.youtube.com/embed/X8ZEJ3_X2Jw">
+                   <div class="videoCardImg">
+                <img src="https://lawpreptutorialkolkata.com/wp-content/uploads/2025/12/thum3.jpg"/>
+                      <img class="playIcon" src="https://lawpreptutorialkolkata.com/wp-content/themes/LawprepKolkata/image/Frame%20661.svg" alt="">
+                </div>
+                <h3>For CLAT coaching that cares and equips you for
+                                    success.
+                                </h3>
+            </figure>
+        </div>
+    </section>
+</body>
+<script>
+    let allQuestion=document.querySelectorAll(".faq-card h2") //NodeList- >Array
+
+    allQuestion.forEach(
+        (question,index)=>{
+          
+            question.addEventListener(
+                "click",
+                ()=>{
+                //    console.log( question.lastElementChild);
+                     question.lastElementChild.classList.toggle("arrowRotate")
+                    question.nextElementSibling.classList.toggle("showAns")
+
+                    //allQuestion
+
+                    allQuestion.forEach((q,i)=>{
+
+                        if(i!=index){
+                            q.lastElementChild.classList.remove("arrowRotate")
+                            q.nextElementSibling.classList.remove("showAns")
+                           
+                        }
+                        
+                        
+                    })
+
+                 
+                }
+            )
+            
+        }
+    )
+
+
+    // console.log(allQuestion);
+    // console.log(allQuestion[0])
+    //  console.log(allQuestion[1])
+
+    // let l=[10,20,30,40,50]
+
+    // for(let v of l){
+    //     console.log(v);
+        
+    // }
+
+    // let l=[10,20,30,40]
+
+    // l.forEach(
+    //     (value,index)=>{
+    //     console.log(value,index);
+        
+    //     }
+    // )
+
+let blackOverlayVidoeELement=document.querySelector(".blackOverlayVidoe")
+let iframeElement=document.querySelector(".blackOverlayVidoe iframe")
+let videoMidAllfigure=document.querySelectorAll(".videoMid figure")
+let closeVideoModalButton=document.querySelector(".blackOverlayVidoe i")  
+
+
+videoMidAllfigure.forEach((figure)=>{
+    figure.addEventListener(
+        "click",
+        ()=>{
+            blackOverlayVidoeELement.classList.add("videoModalShow")
+
+            let videoPath=figure.getAttribute("data-videoPath")
+            iframeElement.src=videoPath
+           
+            
+        }
+    )
+})
+    
+
+ 
+
+closeVideoModalButton.addEventListener(
+    "click",
+    ()=>{
+         blackOverlayVidoeELement.classList.remove("videoModalShow")
+         iframeElement.src=''
+    }
+)
+</script>
+</html>

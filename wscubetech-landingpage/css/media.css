@@ -1,0 +1,39 @@
+@media only screen and (min-width:200px) and (max-width:575px) {
+    .headerMid{
+        flex-direction: column;
+    }
+    .btnOuter{
+        position: fixed;
+        bottom: 0px;
+    }
+    .formSection{
+        padding: 20px 0px;
+    }
+    .formMid{
+        flex-direction: column;
+    }
+    
+    .formMid article h1 {
+    
+                font-size: 35px;
+        text-align: center;
+        line-height: 46px;
+    }
+    .formMid article p{
+        text-align: center;
+            font-size: 20px;
+    line-height: 26px;
+    }
+
+    .couterMid{
+         grid-template-columns: repeat(2,1fr);
+    }
+    .highlightMid{
+        margin: 10px;
+    }
+    .highlightRow{
+        
+        grid-template-columns: repeat(1 ,1fr);
+   
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .DownloadBTN {
+            background-color: rgb(135, 39, 39);
+            color: white;
+            position: fixed;
+            padding: 10px;
+            left: -50px;
+            top: 30%;
+            transform: rotate(90deg);
+
+        }
+
+        .enquiryModal {
+            width: 400px;
+            transition: 0.3s;
+            position: fixed;
+            z-index: 9;
+            left: 50%;
+            top: -1000px;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            box-shadow: 0px 0px 10px 2px #ccc;
+        }
+
+        .enquiryModal h2 {
+            padding: 10px;
+            font-size: 20px;
+            border-bottom: 1px solid #ccc;
+            position: relative;
+
+
+        }
+
+        .enquiryModal h2 span {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+        }
+        .enquiryModal form{
+            margin: 10px;
+        }
+        .enquiryModal form input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+          .enquiryModal form  button{
+            width: 100%;
+            margin-top: 20px;
+            background-color: red;
+            padding: 10px 0px;
+            color: white;
+          }
+
+          .showModal{
+            top: 50%;
+          }
+    </style>
+</head>
+
+<body>
+    <div class="enquiryModal ">
+        <h2>Download Course Brochure <span onclick="hideModal()">&times;</span> </h2>
+
+        <form action="">
+
+            <input type="text" placeholder="Name">
+
+            <input type="email" placeholder="Email">
+
+            <input type="tel" placeholder="Phone">
+
+            <input type="text" placeholder="City">
+
+            <button>Enquire Now</button>
+        </form>
+    </div>
+
+    <button class="DownloadBTN" onclick="showModal()"> Download Brochure</button>
+</body>
+
+<script>
+    let enquiryModalElement=document.querySelector(".enquiryModal")
+    function showModal(){
+        enquiryModalElement.classList.add("showModal")
+    }
+
+     function hideModal(){
+        enquiryModalElement.classList.remove("showModal")
+    }
+</script>
+
+</html>

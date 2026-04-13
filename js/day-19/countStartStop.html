@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+           
+            height: 100vh;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  
+        h1{
+            color: #fff;
+            text-align: center;
+            font-size: 5rem;
+        }
+         .btnOuter{
+            display: flex;
+                margin-left: 20px;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1></h1>    
+        <div class="btnOuter">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn">Stop</button>
+        </div>
+    </div>
+    
+    
+</body>
+<script>
+   let h1Element=document.querySelector("h1")
+    let startBtn=document.querySelector("#startBtn")
+     let stopBtn=document.querySelector("#stopBtn")
+   
+      let count=0
+     let myInterVal
+
+     startBtn.addEventListener(
+        "click",
+        ()=>{
+            
+           myInterVal= setInterval(
+                ()=>{
+                    count++
+                    h1Element.innerHTML=count
+                    if(count==10){
+                        clearInterval(myInterVal)
+                    }
+                   
+                },
+                200
+            );
+        }
+     )
+
+
+        stopBtn.addEventListener(
+            "click",
+            ()=>{
+                clearInterval(myInterVal)
+                count=0
+                h1Element.innerHTML=count
+            }
+        )
+</script>
+</html>

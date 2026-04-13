@@ -1,0 +1,46 @@
+@media only screen and (min-width:200px) and (max-width:575px){
+
+    .blogSection{
+        padding: 20px 0px;
+      
+    }
+
+    .blogMid{
+         margin: 10px;
+         grid-template-columns: repeat(1,1fr);
+    }
+    .aboutSection{
+        padding: 20px 0px;
+    }
+
+    .aboutMid{
+        margin: 10px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .aboutMid article h1{
+        font-size: 25px;
+    }
+
+
+
+}
+
+@media only screen and (min-width:576px) and (max-width:991px){
+
+    .blogSection{
+        padding: 40px 0px;
+      
+    }
+
+    .blogMid{
+         margin: 10px;
+         grid-template-columns: repeat(2,1fr);
+    }
+
+     .aboutSection{
+        padding: 20px 0px;
+    }
+
+
+}

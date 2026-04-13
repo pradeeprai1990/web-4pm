@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        @keyframes rotateDiv {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                  transform: rotate(360deg);
+            }
+            
+        }
+        body{
+            background-color: #080E24;
+        }
+        .main{
+            width: 550px;
+            height: 550px;
+            margin:120px auto;
+            position: relative;
+            
+        }
+        .part1{
+            width: 550px;
+            height: 550px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            position: relative;
+            animation: rotateDiv 15s 0s infinite linear;
+        }
+        .part1Disc{
+            width: 20px;
+            height: 20px;
+             border-radius: 50%;
+             position: absolute;
+             left: 183px;
+            background-color: yellow;
+        }
+
+        .part1Disccirlce{
+            width: 25px;
+            height: 25px;
+            border: 2px solid white;
+               border-radius: 50%;
+               transform: skewY(50deg);
+            position: absolute;
+        }
+
+        .part2{
+            width: 500px;
+            height: 500px;
+                        border: 2px solid #ccc;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 25px;
+                        top: 25px;
+                          animation: rotateDiv 13s 0s infinite linear;
+        }
+        .part2Disc{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: blue;
+            position: absolute;
+            left: 174px;
+        }
+
+        .part3{
+              width: 450px;
+            height: 450px;
+                        border: 2px solid #ccc;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 50px;
+                        top: 50px;
+                          animation: rotateDiv 13s 0s infinite linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="part1">
+            <div class="part1Disc">
+                <div class="part1Disccirlce"></div>
+            </div>
+        </div>
+
+        <div class="part2">
+            <div class="part2Disc"></div>
+        </div>
+
+         <div class="part3">
+            <div class="part2Disc"></div>
+        </div>
+    </div>
+</body>
+</html>

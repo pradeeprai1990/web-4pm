@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overLayGallery">
+        <div class="galleryModal">
+            <span>&times;</span>
+            <img src="" alt="">
+        </div>
+    </div>
+
+
+    <section class="gallerySection">
+        <h2>Our Offering</h2>
+        <div class="galleryMid">
+            <figure>
+                <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-06.jpg" alt="">
+            </figure>
+             <figure>
+                <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-08.jpg" alt="">
+            </figure>
+              <figure>
+                <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-10.jpg" alt="">
+            </figure>
+              <figure>
+                <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-05.jpg" alt="">
+            </figure>
+             <figure>
+                <img src="https://uptownskylla.in/wp-content/uploads/2022/09/Under-Interior-Design-4-1400x700.jpg" alt="">
+            </figure>
+             <figure>
+                <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Container-No-3rd-01.jpg" alt="">
+            </figure>
+        </div>
+    </section>
+</body>
+<script>
+    let galleryMidElement=document.querySelector(".galleryMid")
+   
+    let overLayGalleryElement=document.querySelector(".overLayGallery")
+     let galleryModalImg=document.querySelector(".overLayGallery img")
+
+
+    galleryMidElement.addEventListener(
+        "click",
+        (event)=>{
+            //event.target
+            //<img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-06.jpg" alt="">
+            let clickedSrc=event.target.src
+            if(clickedSrc){
+                
+                overLayGalleryElement.classList.add('showModal')
+                galleryModalImg.src=clickedSrc
+                
+            }
+            
+        //    console.log(event.target.src);
+           //https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-06.jpg
+           //
+           
+        }
+    )
+
+
+
+ let closeBtn=document.querySelector(".overLayGallery span")
+
+
+ let closeModal=()=>{
+         overLayGalleryElement.classList.remove('showModal')
+         galleryModalImg.src=''
+    }
+closeBtn.addEventListener(
+    "click",
+    closeModal
+)
+
+
+overLayGalleryElement.addEventListener(
+    "click",
+    closeModal
+)
+
+
+let galleryModal=document.querySelector(".galleryModal")
+galleryModal.addEventListener(
+    "click",
+    (e)=>{
+        e.stopPropagation()
+    }
+)
+
+</script>
+</html>

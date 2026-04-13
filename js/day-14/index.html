@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            list-style: none;
+        }
+
+        .main {
+            width: 1170px;
+            margin: auto;
+            border: 1px solid red;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .btn {
+            padding: 10px;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <p>
+            1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, blanditiis accusamus corporis earum ad,
+            fugiat quidem quisquam possimus vel adipisci delectus neque odio sed optio, unde praesentium! Illo, eum
+            voluptatum.
+        </p>
+
+        <p>
+            2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, blanditiis accusamus corporis earum ad,
+            fugiat quidem quisquam possimus vel adipisci delectus neque odio sed optio, unde praesentium! Illo, eum
+            voluptatum.
+        </p>
+
+        <button onclick="changeColor()" class="btn">Save</button>
+
+        <button class="btn" id="go">Go</button>
+    </div>
+</body>
+<script>
+
+    let paraElement = document.querySelector("p")
+    function changeColor() {
+        paraElement.style.color = "red"
+        paraElement.style.backgroundColor = "yellow"
+
+        //<p style="color:red"> </p>
+        console.log(paraElement);
+    }
+
+
+
+
+    //  let para2Element=document.querySelector("p:nth-child(2)")
+    // console.log(para2Element);
+
+
+
+
+    let btnELement = document.querySelector(".btn") //ID,CLass,TagName
+
+    console.log(btnELement);
+
+    let btnGoElement = document.querySelector("#go") //ID,CLass,TagName
+
+    console.log(btnGoElement);
+
+
+</script>
+
+</html>

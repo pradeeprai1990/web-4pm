@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainELement{
+            width: 1170px;
+            margin: auto;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainELement">
+        <h1>Welcome</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse error nam est temporibus sed a eos aperiam facere, id enim, corporis maiores, ratione doloremque quo dignissimos numquam eligendi. Totam, quos!
+        </p>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse error nam est temporibus sed a eos aperiam facere, id enim, corporis maiores, ratione doloremque quo dignissimos numquam eligendi. Totam, quos!
+        </p>
+        <button>Save</button>
+    </div>
+</body>
+<script>
+    let mainELement=document.querySelector(".mainELement")
+    mainELement.addEventListener(
+        "click",
+        (  e )=>{
+            e.target.style.color="red"
+            alert("Hello")
+            
+         }
+    )
+
+
+    let btn=document.querySelector("button")
+    
+    btn.addEventListener(
+        "click",
+         (e)=>{
+            e.stopPropagation() // Parent element ke event ko stop kar deta hai
+            alert("BTN Hello")
+         }
+    )
+
+    
+
+</script>
+</html>

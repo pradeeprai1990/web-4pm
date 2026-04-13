@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 45%, #fef6ef 100%);
+    color: #1f2937;
+}
+
+.faq-page{
+    min-height: 100vh;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.faq-wrapper{
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 28px;
+    padding: 50px;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.faq-intro{
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.faq-badge{
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 18px;
+    border-radius: 999px;
+    background: #e0ecff;
+    color: #1d4ed8;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.faq-intro h1{
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: #0f172a;
+}
+
+.faq-intro p{
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.faq-grid{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.faq-card{
+    padding: 28px;
+    border-radius: 22px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 14px 35px rgba(148, 163, 184, 0.16);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.16);
+}
+
+.faq-card h2{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    color: #0f172a;
+    position: relative;
+}
+.faq-card h2 i{
+    transition: 0.5s;
+    position: absolute;
+    right: 0px;
+}
+.faq-card p{
+    font-size: 0.98rem;
+    line-height: 1.75;
+    display: none;
+    color: #475569;
+}
+
+@media (max-width: 768px){
+    .faq-page{
+        padding: 30px 15px;
+    }
+
+    .faq-wrapper{
+        padding: 30px 20px;
+        border-radius: 22px;
+    }
+
+    .faq-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .faq-card{
+        padding: 22px;
+    }
+}
+
+
+.showAns{
+    display: block !important;
+}
+
+.arrowRotate{
+    transform: rotate(-180deg);
+}
+
+.videoSection{
+    width: 100%;
+    background-color: #1d4ed8;
+    padding: 50px 0px;
+}
+
+.videoMid{
+    max-width:  1320px;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+}
+.videoMid figure{
+    background-color: white;
+}
+.videoMid figure img{
+    width: 100%;
+}
+.videoMid figure h3{
+    padding: 10px;
+}
+
+.videoCardImg{
+    position: relative;
+}
+
+
+
+.playIcon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:100px !important;
+}
+
+.blackOverlayVidoe{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+     z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoModal{
+    width: 1000px;
+    position: relative;
+  
+   
+    
+}
+.videoModal i{
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    top: -20px;
+    font-size: 30px;
+}
+.videoModal iframe{
+    width: 100%;
+    height: 500px;
+}
+
+.videoModalShow{
+    display: flex;
+}

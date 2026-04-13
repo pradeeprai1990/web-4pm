@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            list-style: none;
+
+        }
+
+        .main{
+            width: 1000px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, nemo provident repellat delectus voluptates
+            velit sapiente sunt corporis autem iure quo temporibus ea cum nihil id, voluptate eveniet vel ut.
+        </div>
+        <button>Save</button>
+    </div>
+    
+</body>
+<script>
+    let btnElement=document.querySelector("button")
+    let mainElement=document.querySelector(".main")
+
+    btnElement.addEventListener( "click" ,function(){
+        mainElement.style.background="red"
+         mainElement.style.padding="20px"
+    } )
+
+
+    let n=20+30
+
+    let w=`welcome  ${n}  to ws` //Template literals string interpolation 
+    console.log(w);
+    
+</script>
+</html>
