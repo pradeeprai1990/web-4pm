@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --container-middle-container: 1320px; 
+
+  --spacing-desktop:50px;
+   --spacing-desktop:50px;
+   --color-primaryColor:#0032e5;
+}

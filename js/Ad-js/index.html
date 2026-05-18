@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let l=[10,20,30,48,99,77]
+
+    // let [n,m,c,...r]=l
+    // console.log(c);
+    
+    // console.log(n); //10
+    // console.log(r); //[48,99,77]
+    
+    // console.log(m); //20
+
+
+    // let l=[1,2,3,4]
+
+    // let m=[...l]
+    
+    // console.log(m,l);
+    
+    // m.push(99)
+
+    // console.log(m,l);
+    
+
+    // let n=[88,99,77,44]
+
+    // let age=[...n]
+
+
+
+    let obj={
+        uname:"pradeep",
+        email:"pradeep@ws.com",
+        phone:88888888,
+        display:()=>{
+            console.log("hello");
+            
+        }
+    }
+
+    let {email}=obj
+    console.log(obj['email']);
+    console.log(obj.email);
+    console.log(email);
+    
+
+
+
+
+    obj.phone=99999999
+
+    console.log(obj);
+
+
+    delete obj.uname
+
+    console.log(obj);
+    
+    
+
+    // obj.display();
+
+    let user=[
+        {
+            name:"pradeep",
+            email:"pradeep@gmail.com"
+        },
+        {
+            name:"suresh",
+            email:"suresh@gmail.com"
+        },
+         {
+            name:"ravi",
+            email:"suresh@gmail.com"
+        },
+        {
+            name:"ramesh",
+            email:"ramesh@gmail.com"
+        },
+        {
+            name:"rajesh",
+            email:"rajesh@gmail.com"
+        }
+    ] 
+
+    let checkUser=user.filter((obj)=>obj.email=="suresh@gmail.com")
+    console.log(checkUser);
+    
+
+
+    // for(let v of user){
+    //      v.salary=10000
+        
+    // }
+    // console.log(user);
+    
+
+
+   
+//     let newArray=[]
+
+//    for(let v of user){
+//         v.salary=5000
+//         newArray.push(v) 
+    
+//    }
+
+//    console.log(newArray);
+   
+    
+
+//    let newArray=user.map((obj)=>{
+      
+//         obj.salary=5000
+//         return obj
+//     })
+
+    // console.log(newArray);
+
+    // console.log(user[0].salary);
+    
+
+    // for(let v of user){
+    //     console.log(v);
+        
+    // }
+    
+
+        // user[2].email="rameshnew@gmail.com"
+
+        // console.log(user);
+        
+    
+    
+</script>
+</html>
