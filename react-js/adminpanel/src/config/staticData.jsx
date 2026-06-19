@@ -1,0 +1,1 @@
+export let defImage="https://thumbs.dreamstime.com/b/no-preview-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-97109627.jpg"
