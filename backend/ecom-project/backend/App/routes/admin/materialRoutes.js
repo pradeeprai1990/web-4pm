@@ -1,28 +1,15 @@
 let express=require("express")
+const { materialCreate, materialView, materialDelete, materialUpdate, materialmultiDelete } = require("../../controllers/admin/materialController")
 let materialRoutes=express.Router()
 
-materialRoutes.post('/create',
-    (req,res)=>{
-        res.send({message: "material created successfully",status:1})
-    }
-)
+materialRoutes.post('/create',materialCreate)
 
-materialRoutes.get('/view',
-    (req,res)=>{
-        res.send({message: "material View",status:1})
-    }
-)
+materialRoutes.get('/view',materialView)
 
 
-materialRoutes.delete('/delete',
-    (req,res)=>{
-        res.send({message: "material Delete",status:1})
-    }
-)
+materialRoutes.delete('/delete/:id',materialDelete)
 
-materialRoutes.put('/update',
-    (req,res)=>{
-        res.send({message: "material Update",status:1})
-    }
-)
+materialRoutes.put('/update/:id',materialUpdate)
+
+materialRoutes.post('/multidelete',materialmultiDelete)
 module.exports=materialRoutes

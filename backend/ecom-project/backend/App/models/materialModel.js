@@ -4,9 +4,9 @@ let materialSchema=mongoose.Schema(
     {
         name:{
             type:String, // metal,plastic,wood
-            minLength:2, // minimum length of name is 2
-            maxLength:15, // maximum length of name is 15
-            require:true // name is required
+            minLength:[2,"material name minimum length of name is 2"], // minimum length of name is 2
+            maxLength:[15," material name maximum length of name is 15"], // maximum length of name is 15
+            required:[true,"material name is required"], // name is required,
         },
         status:{
             type:Boolean, // true or false

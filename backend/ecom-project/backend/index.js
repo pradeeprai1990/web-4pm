@@ -8,6 +8,10 @@ let App = express();
 
 App.use(express.json()); //
 
+App.use("/uploads/category",express.static("uploads/category"))
+App.use("/uploads/slider",express.static("uploads/slider"))
+App.use("/uploads/product",express.static("uploads/product"))
+
 App.use("/admin", adminRoutes);
 
 
