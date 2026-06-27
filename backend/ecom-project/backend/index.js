@@ -3,9 +3,10 @@ let express = require("express");
 const routes = require("./App/routes/adminRoutes");
 const adminRoutes = require("./App/routes/adminRoutes");
 const dbConnection = require("./App/config/dbConnection");
+let cors=require("cors")
 require("dotenv").config(); //ENV Read
 let App = express();
-
+App.use(cors())
 App.use(express.json()); //
 
 App.use("/uploads/category",express.static("uploads/category"))

@@ -71,12 +71,35 @@ let colorUpdate =async (req, res) => {
 
 
 let colormultiDelete=async (req,res)=>{
-  let {colorIDS}=req.body //Array ["6a38dfdadaf7faa9e96213e4","6a38dfdfdaf7faa9e96213e5"]
+  let {ids}=req.body //Array ["6a38dfdadaf7faa9e96213e4","6a38dfdfdaf7faa9e96213e5"]
 
-  let delRes=await colorModel.deleteMany({_id:colorIDS})
+  let delRes=await colorModel.deleteMany({_id:ids})
 
  res.send({ message: "Color Delete", status: 1 ,delRes});
   
 
 }
-module.exports = { colorCreate, colorView, colorDelete, colorUpdate,colormultiDelete };
+
+let changeStatus=async (req,res)=>{
+   let {ids}=req.body //Array
+
+   for(let v of ids){
+      console.log(v);
+      let {status}=await colorModel.findOne({_id:v}) //OBject
+      await colorModel.updateOne(
+        {_id:v},
+        {
+          $set:{
+            status:!status
+          }
+        }
+      )
+      console.log(status);
+      
+      
+   }
+
+    res.send({ message: "Color Status Update", status: 1 });
+
+}
+module.exports = { colorCreate, colorView, colorDelete, colorUpdate,colormultiDelete,changeStatus };
