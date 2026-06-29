@@ -64,9 +64,9 @@ let colorUpdate =async (req, res) => {
               $set:colorUpdateobj
           }
       );
-      res.send({ message: "Country Update", status: 1 ,colorRes});
+      res.send({ message: "Color Update", status: 1 ,colorRes});
 
-  res.send({ message: "Color Update", status: 1 });
+ 
 };
 
 
@@ -102,4 +102,11 @@ let changeStatus=async (req,res)=>{
     res.send({ message: "Color Status Update", status: 1 });
 
 }
-module.exports = { colorCreate, colorView, colorDelete, colorUpdate,colormultiDelete,changeStatus };
+
+let getColorDetails=async (req,res)=>{
+  let {id}=req.params
+   let data = await colorModel.findOne({_id:id}).select(['name',"code","order"]);
+  res.send({ message: "Color View", status: 1, data });
+
+}
+module.exports = {getColorDetails, colorCreate, colorView, colorDelete, colorUpdate,colormultiDelete,changeStatus };

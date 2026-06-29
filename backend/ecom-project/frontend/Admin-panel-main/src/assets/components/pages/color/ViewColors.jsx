@@ -6,6 +6,7 @@ import {
   FaRotateRight,
   FaArrowRotateLeft,
 } from "react-icons/fa6";
+import { Link } from "react-router";
 
 export default function ViewColors() {
   const [data, setData] = useState([]);
@@ -199,9 +200,11 @@ export default function ViewColors() {
                   </td>
 
                   <td className="px-4 py-3 text-center">
-                    <button>
-                      <FaPenToSquare className="mx-auto cursor-pointer text-xl text-yellow-500 hover:text-yellow-600" />
-                    </button>
+                    <Link to={`/color/edit/${obj._id}`}>
+                      <button>
+                        <FaPenToSquare className="mx-auto cursor-pointer text-xl text-yellow-500 hover:text-yellow-600" />
+                      </button>
+                    </Link>
                   </td>
                 </tr>
               ))

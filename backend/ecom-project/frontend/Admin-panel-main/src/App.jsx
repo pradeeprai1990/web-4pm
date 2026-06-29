@@ -31,6 +31,7 @@ function App() {
                     <Route path='/why-choose-us/add' element={<AddWhyChooseUs />} />
                     <Route path='/why-choose-us/view' element={<ViewWhyChooseUs />} />
                     <Route path='/color/add' element={<AddColor />} />
+                     <Route path='/color/edit/:id' element={<AddColor />} />
                     <Route path='/color/view' element={<ViewColors />} />
                     <Route path='/material/add' element={<AddMaterial />} />
                     <Route path='/material/view' element={<ViewMaterials />} />
